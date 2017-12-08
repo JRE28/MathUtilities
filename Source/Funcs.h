@@ -5,11 +5,9 @@
 using namespace std;
 
 
-class Funcs 
-{
-public: 
-	static void fprint(string phr, unsigned int speed = 100, bool endli = true);
-	static void Sequation(void);
-};
+	
+void fprint(string phr, unsigned int speed = 100, bool endli = true);
+void Sequation(void);
+
 
 #endif //FUNCS_H//
