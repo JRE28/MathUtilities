@@ -1,6 +1,7 @@
 #include <iostream>
 #include <windows.h>
 #include <iostream>
+#include <sstream>
 #include <cmath>
 #include "Funcs.h"
 using namespace std;
@@ -34,8 +35,9 @@ void Sequation() {
 	string Ic;
 	int ax2;
 	int bx;
-	int p1;
-	int p2;
+	float p1;
+	float p2;
+	int discr;
 	int eq1;
 	int eq2;
 	int c;
@@ -51,20 +53,26 @@ void Sequation() {
 	ax2 = atoi(Iax2.c_str());	//Transforming
 	bx = atoi(Ibx.c_str());		//the strings 
 	c = atoi(Ic.c_str());		//into ints
-	try 
+	p1 = -bx;
+	discr = (bx*bx)-4*ax2*c;
+	if(discr < 0) 
 	{
-		p1 = -bx;
-		p2 = sqrt((pow(bx, 2))-4*ax2*c);
-		eq1 = (p1+p2)/(2*ax2);
-		eq1 = (p1-p2)/(2*ax2);
-		cout << "Solution X^1: " << eq1;
-		cout << "Solution X^2: " << eq2;
-	} catch(overflow_error e)
-	{
-		cout << "Both solutions are 0";
-	} catch(domain_error r)
-	{
-		cout << "Discriminant is a negative number";
+		cerr << "No real solution, the discriminant is negative" << endl;
+		goto END;
 	}
-
+	p2 = sqrt((bx*bx)-4*ax2*c);
+	eq1 = (p1+p2)/(2*ax2);
+	eq2 = (p1-p2)/(2*ax2);
+	if(eq1 == 0 && eq2 == 0)
+	{
+		cerr << "Both solutions are 0\nThe discriminant is equal to 0" << endl; 
+	}
+	else
+	{
+		cout << p1 << endl;
+		cout << p2 << endl;
+		cout << "Solution X^1: " << eq1 << endl;
+		cout << "Solution X^2: " << eq2 << endl;
+	}
+	END: cout << "Program ended" << endl;
 }
