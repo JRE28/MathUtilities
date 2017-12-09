@@ -10,7 +10,7 @@ void fprint(string phr, unsigned int speed = 100, bool endli = true);
 void Sequation(void);
 void CleanScreen(void);
 void clickToEnd(void);
-void unnamed(void);
+void printArray(string h[], int si);
 
 
 #endif //FUNCS_H//

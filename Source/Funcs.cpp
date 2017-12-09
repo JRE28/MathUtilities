@@ -87,3 +87,11 @@ void clickToEnd()
 	char empty;		//Variable without any value
 	system("pause");
 }
+
+void printArray(string h[], int si)
+{
+	for(int it = 0; it < si ; it++)
+	{
+		cout << "-| " << h[it] << endl;
+	}
+}
