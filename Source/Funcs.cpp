@@ -76,3 +76,14 @@ void Sequation() {
 	}
 	END: cout << "Program ended" << endl;
 }
+
+void CleanScreen()
+{
+	system("cls");
+}
+
+void clickToEnd()
+{
+	char empty;		//Variable without any value
+	system("pause");
+}
