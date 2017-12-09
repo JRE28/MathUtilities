@@ -51,11 +51,11 @@ void Sequation() {
 	cin >> Ic;		//Gets third value for c
 	cout << endl;
 	ax2 = atoi(Iax2.c_str());	//Transforming
-	bx = atoi(Ibx.c_str());		//the strings 
+	bx = atoi(Ibx.c_str());		//the strings
 	c = atoi(Ic.c_str());		//into ints
 	p1 = -bx;
 	discr = (bx*bx)-4*ax2*c;
-	if(discr < 0) 
+	if(discr < 0)
 	{
 		cerr << "No real solution, the discriminant is negative" << endl;
 		goto END;
@@ -65,7 +65,7 @@ void Sequation() {
 	eq2 = (p1-p2)/(2*ax2);
 	if(eq1 == 0 && eq2 == 0)
 	{
-		cerr << "Both solutions are 0\nThe discriminant is equal to 0" << endl; 
+		cerr << "Both solutions are 0\nThe discriminant is equal to 0" << endl;
 	}
 	else
 	{
