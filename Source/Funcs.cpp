@@ -22,7 +22,7 @@ void fprint(string phr, unsigned int speed, bool endli) {
 			limit = orlimit * its;
 		}
 		cout << phr[st];
-		Sleep(speed);
+		Sleep(speed);		//The bigger the speed is, the slower the letters move
 	}
 	if(endli == true) {
 		cout << endl;
@@ -82,16 +82,30 @@ void CleanScreen()
 	system("cls");
 }
 
-void clickToEnd()
-{
-	char empty;		//Variable without any value
-	system("pause");
-}
-
 void printArray(string h[], int si)
 {
 	for(int it = 0; it < si ; it++)
 	{
 		cout << "-| " << h[it] << endl;
+	}
+}
+
+string selectFromArray(string inps[], int siz)
+{
+	bool completed = false;		//To keep the iterations ongoing
+	string selection;
+	string selected = "abacada";
+	cin >> selection;
+	for (size_t i = 0; i < siz; i++)
+	{
+		if(selection == inps[i])
+		{
+			selected = inps[i];		//Selected becomes the found string
+			break;
+		}
+	}
+	if(selected == "abacada")
+	{
+		throw
 	}
 }

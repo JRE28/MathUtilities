@@ -9,8 +9,7 @@ int main(void)
 {
 	int size = 2;
 	string options[] = {"Equation^2", "Cuadratics"};
-	string selection;
-	fprint("Type in what do you want to do:", 150, false);
+	fprint("Type in what do you want to do:", 50);
 	printArray(options,size);
 
 }
